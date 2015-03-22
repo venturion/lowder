@@ -1,3 +1,8 @@
+*{
+	margin: 0px;
+	padding: 5px;
+}
+
 body {
   font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
   font-size: 100%;
@@ -5,10 +10,14 @@ body {
   color: #212121;
 }
 
-#status {
-  /* avoid an excessively wide status text */
-  white-space: pre;
-  text-overflow: ellipsis;
+#howtouse {
   overflow: hidden;
+  width: auto;
+  min-width: 250px;
   max-width: 400px;
+  margin: 10px 0px 10px 0px;
+}
+
+ul li{
+	padding: 4px 7px;
 }

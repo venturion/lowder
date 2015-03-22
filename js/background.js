@@ -1,4 +1,4 @@
-chrome.browserAction.disable();
+//chrome.browserAction.disable();
 
 var execute = {
     file: "js/stop.js"

@@ -62,8 +62,8 @@
 
     "_execute_browser_action": {
       "suggested_key": {
-        "default": "Alt+Shift+U",
-        "mac": "Alt+Shift+U"
+        "default": "Ctrl+Shift+X",
+        "mac": "Ctrl+Shift+X"
       }
     }
 
