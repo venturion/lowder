@@ -5,18 +5,30 @@
   "description": "Decrease volume from tabs, except current.",
   "version": "1.0",
 
-  "options_ui": {
-    "page": "options.html",
-    "chrome_style": true
-  },
+  //"options_ui": {
+    //"page": "options.html",
+    //"chrome_style": true
+  //},
 
   "background": {
     "scripts" : ["js/background.js"],
     "persistent" : false
   },
 
+  "icons": {
+    "19" : "img/icon.png",
+    "38" : "img/icon.png",
+    "48" : "img/icon.png",
+    "128" : "img/icon.png"
+  },
+
   "browser_action": {
-    "default_icon": "img/icon.png",
+    "default_icon": {
+      "19" : "img/icon.png",
+      "38" : "img/icon.png",
+      "48" : "img/icon.png",
+      "128" : "img/icon.png"
+    },
     "default_popup": "popup.html"
   },
 
