@@ -1,0 +1,69 @@
+{
+  "manifest_version": 2,
+
+  "name": "Lowder",
+  "description": "Decrease volume from tabs, except current.",
+  "version": "1.0",
+
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+
+  "background": {
+    "scripts" : ["js/background.js"],
+    "persistent" : false
+  },
+
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "js": ["js/jquery-1.11.2.js", "js/inject.js"],
+      "matches": ["<all_urls>"],
+      "css": ["css/inject.css"],
+      "run_at": "document_start",
+      "all_frames": true      
+    }
+  ],
+
+  "commands": {
+
+    "play" : {
+      "suggested_key": {
+        "default": "Alt+Shift+K", 
+        "mac": "Alt+Shift+K"
+      },
+      "description": "play tab media"
+    },
+
+    "stop" : {
+      "suggested_key": {
+        "default": "Alt+Shift+X", 
+        "mac": "Alt+Shift+X"
+      },
+      "description": "stop tab media"
+    },
+
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+U",
+        "mac": "Alt+Shift+U"
+      }
+    }
+
+  },
+
+  "permissions": [
+    "storage",
+    "background",
+    "tabs",
+    "activeTab",
+    "notifications",
+    "<all_urls>"  
+  ]
+
+}
